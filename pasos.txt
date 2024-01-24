@@ -1,0 +1,41 @@
+#---------------------------------------------------------------
+
+1. Crear el ENTORNO VIRTUAL -> venv:
+
+_ comando -> python3 -m venv .venv
+_ comando activar entorno VIRTUAL -> source venv/Scripts/activate
+_ comando -> deactivate
+
+2. instalar:
+
+_ comando -> pip install django
+
+3. Creando PROYECTO:
+
+_ comando -> django-admin startproject portafolio
+
+
+#-------
+
+4
+_ comando -> python manage.py runserver
+_ comando -> python manage.py runserver 7000 | si agrego un numero me cambia de puerto
+
+
+5. crear la base de datos:
+
+_ comando -> python manage.py migrate
+
+
+6. Creando super usuario:
+
+comando -> [python manage.py createsuperuser]
+ _ Username: williams392
+ _ email: v_s392@gmail.com
+ _ Password: l_5
+
+
+7. Creando la aplicación - core es el CORAZON:
+
+_ comando -> python manage.py startapp core
+
