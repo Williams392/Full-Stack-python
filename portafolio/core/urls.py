@@ -1,9 +1,9 @@
 # 2
 
 from django.urls import path
-from .views import index, quienes
+from .views import index
 
 urlpatterns = [
     path('', index),
-    path('quienes/', quienes),
+
 ]
