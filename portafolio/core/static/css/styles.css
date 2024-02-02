@@ -1,28 +1,66 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial',sans-serif;
     margin: 0;
     padding: 0;
 }
 
-
 header {
-    background-color: #333;
+    background-color: black;
     color: white;
     text-align: center;
-    padding: 1em; /* espacio */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #proyectos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 2em; 
+    margin: 2em;
+
 }
+
 .proyecto {
     width: 300px;
     margin: 1em;
 }
+
 .proyecto img {
     width: 100%;
     height: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* estas 2 deritevas da mejor aparencia h1 y p */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+.header-text {
+    text-align: left;
 }
