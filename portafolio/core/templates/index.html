@@ -8,9 +8,9 @@
         {% for proyecto in proyectos %}
         <div class="proyecto">
             <img src={{proyecto.imagen.url}}>
-            <h2>{{proyecto.tecnologia}}</h2>
-            <p>{{proyecto.lenguaje}}</p>
-            <p>{{proyecto.año}} </p>
+            <h2>{{proyecto.proyecto}}</h2>
+            <p><b>Lenguaje: {{proyecto.lenguaje}}</b></p>
+            <p><b>Año: {{proyecto.año}} </b></p>
         </div>
         {% endfor %}
         

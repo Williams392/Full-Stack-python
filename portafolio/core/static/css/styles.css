@@ -43,6 +43,7 @@ footer {
     width: 100%;
 }
 
+/* con este estilo la img sale redondeada */
 .profile-picture img {
     border-radius: 50%;
     width: 150px;

@@ -37,5 +37,8 @@ comando -> [python manage.py createsuperuser]
 
 7. Creando la aplicación - core es el CORAZON:
 
-_ comando -> python manage.py startapp core
+_ comando -> pip install psycopg2
 
+
+_ instalar libreria de PostreSQL(borrar las migraciones de la base de datos anterior, en caso si se va a migrar a otra base.):
+comando: pip install pyscopg2
