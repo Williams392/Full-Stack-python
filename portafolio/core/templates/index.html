@@ -1,20 +1,25 @@
 {% extends 'base/base.html' %}
-{% load static %}
+{% load  static %}
 
 {% block content %}
 
-    <section id="proyectos">
+<div class="container">
+    <div class="row justify-content-center">
+      {% for proyecto in proyectos %}
+        <div class="col-md-4 mb-4">
 
-        {% for proyecto in proyectos %}
-        <div class="proyecto">
-            <img src={{proyecto.imagen.url}}>
-            <h2>{{proyecto.proyecto}}</h2>
-            <p><b>Lenguaje: {{proyecto.lenguaje}}</b></p>
-            <p><b>Año: {{proyecto.año}} </b></p>
+            <div class="card" style="width: 18rem;">
+                <div class="card bg-ligth">
+                    <img src="{{proyecto.imagen.url}}" class="card-img-top" alt="{{ producto.nombre }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{proyecto.tecnologia}}</h5>
+                        <p class="card-text">{{proyecto.lenguaje}}</p>
+                        <a href="#" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-    </section>
-
+    </div>
+</div>   
 {% endblock %}    
-
