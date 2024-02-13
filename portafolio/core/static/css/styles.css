@@ -65,3 +65,7 @@ p {
 .header-text {
     text-align: left;
 }
+
+#contenido-principal {
+    margin-bottom: 60px;
+}

@@ -20,7 +20,13 @@ class MiPortafolio(models. Model):
 
     def __str__(self):
         return self.proyecto
+    
+class Comentario(models. Model):
+    comentario = models.TextField()
+    nombre = models.CharField(max_length=120)
 
+    def __str__(self):
+        return self.nombre
 
 
 # python manage.py makemigrations

@@ -1,7 +1,8 @@
 # 1
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Proyecto, MiPortafolio
+from .forms import ComentarioForms
 
 def index(request):
     template_name = "index.html"
@@ -16,11 +17,28 @@ def index(request):
     # ]
 
     miportafolio = MiPortafolio.objects.all() # select * fromn MiPortafolio
-
     context = { # para pasar al templates
         'proyectos':miportafolio
     }
 
     return render(request, template_name, context)
+
+
+def detalles(request, id):
+    template_name = "detalles.html"
+
+    if request.method=="POST":
+        form=ComentarioForms(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        miportafolio = MiPortafolio.objects.get(pk=id) 
+        form=ComentarioForms()
+        context = { 
+            'proyecto':miportafolio,
+            'form': form
+        }
+        return render(request, template_name, context)
 
 
